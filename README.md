@@ -1,10 +1,13 @@
-//Mark- Hello,
+# Hello,
 This is my first job application assignment.
 I tried to make an application by trying a Mvc Design Pattern method according to the documentation below.
   Many thanks to VERO-Digital
 
 
-
+           
+                   
+                          
+                          
 
 
 Hello dear iOS dev prospect!
