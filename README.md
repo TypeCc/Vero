@@ -1,3 +1,12 @@
+//Mark- Hello,
+This is my first job application assignment.
+I tried to make an application by trying a Mvc Design Pattern method according to the documentation below.
+  Many thanks to VERO-Digital
+
+
+
+
+
 Hello dear iOS dev prospect!
 
 This repository is supposed to act as a playground for your submission.
@@ -25,16 +34,7 @@ It's mandatory for your requests towers the API to be authorized. You can find t
 
 This is how it looks in `curl`:
 
-```bash
-curl --request POST \
-  --url https://api.baubuddy.de/index.php/login \
-  --header 'Authorization: Basic QVBJX0V4cGxvcmVyOjEyMzQ1NmlzQUxhbWVQYXNz' \
-  --header 'Content-Type: application/json' \
-  --data '{
-        "username":"365",
-        "password":"1"
-}'
-```
+
 
 The response will contain a json object, having the access token in `json["oauth"]["access_token"]`. For all subsequent calls this has to be added to the request headers as `Authorization: Bearer {access_token}`.
 
@@ -44,17 +44,16 @@ A possible implementation in `Swift` could be the following. You don't have to c
 import Foundation
 
 let headers = [
-  "Authorization": "Basic QVBJX0V4cGxvcmVyOjEyMzQ1NmlzQUxhbWVQYXNz",
-  "Content-Type": "application/json"
+  "Authorization": "",
+  "Content-Type": ""
 ]
 let parameters = [
-  "username": "365",
-  "password": "1"
+ 
 ] as [String : Any]
 
 let postData = JSONSerialization.data(withJSONObject: parameters, options: [])
 
-let request = NSMutableURLRequest(url: NSURL(string: "https://api.baubuddy.de/index.php/login")! as URL,
+let request = NSMutableURLRequest(url: NSURL(string: "https://api.baubuddy.de/index")! as URL,
                                         cachePolicy: .useProtocolCachePolicy,
                                     timeoutInterval: 10.0)
 request.httpMethod = "POST"
