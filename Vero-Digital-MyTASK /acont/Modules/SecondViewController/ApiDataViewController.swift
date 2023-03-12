@@ -34,8 +34,6 @@ final class ApiDataViewController: UIViewController, UISearchResultsUpdating, UI
         self.myTableView.reloadOnMainThread()
         print(getDocumentPat())
         print(getJsonFilePath())
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -149,8 +147,6 @@ extension ApiDataViewController: UITableViewDelegate, UITableViewDataSource {
                 return Post.count
             }
         }
-
-        
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -177,7 +173,7 @@ extension ApiDataViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-
+//MARK: - Searchbar Filter Controller
 extension ApiDataViewController {
     
     private func filterContentForSearchText(_ searchText: String) {
@@ -215,7 +211,5 @@ extension ApiDataViewController {
              self.myTableView.reloadOnMainThread()
          }
      }
-    
-    
 }
 

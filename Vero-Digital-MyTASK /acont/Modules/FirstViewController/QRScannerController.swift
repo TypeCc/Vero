@@ -95,6 +95,9 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
             
             if metadataObj.stringValue != nil {
                 messageLbl.text = metadataObj.stringValue
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                    self.performSegue(withIdentifier: "goMain", sender: nil)
+                }
             }
         }
     }
